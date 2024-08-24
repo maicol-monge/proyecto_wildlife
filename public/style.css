@@ -239,8 +239,14 @@ de aqui para lo de los testimonios*/
     display: flex;
     align-items: center;
     position: relative;
+    overflow: hidden; /* Asegura que el gradiente no se desborde */
+    transition: background-size 5s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave */
 }
-
+.gradiente-section:hover {
+    background-size: 150% 100%; /* Aumenta el tamaño del gradiente */
+    background-position: center; /* Asegura que el gradiente se centra */
+    transition: background-size 3s ease;
+}
 
 .requisitos-text {
     color: #FFFFFF; /* Color del texto */
@@ -298,4 +304,41 @@ de aqui para lo de los testimonios*/
     border: 0;
     color: white;
     font-weight: bold;
+}
+.btnSendForm:hover{
+    background-color: #63963f;
+}
+.beige:hover{
+    background-color: #cdcbaf; 
+}
+.dark-green:hover{
+    background-color: #202e24;
+}
+.light-green:hover{
+    background-color: #649441;
+}
+.block:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
 }

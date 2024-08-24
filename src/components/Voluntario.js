@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import quokka from './images/quokka.jpeg';
@@ -8,7 +8,9 @@ import MariaLopez from './images/chica lago.jpg';
 import quoteLeft from './images/comilla-left.png';
 import quoteRight from './images/comilla-right.png';
 
+
 function Voluntario() {
+
     const backg_quokka = {
         backgroundImage: `url(${quokka})`,
         backgroundSize: 'cover',
@@ -16,13 +18,49 @@ function Voluntario() {
         backgroundRepeat: 'no-repeat',
         height: '200vh' // O el alto que prefieras
     };
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const element = document.querySelector('.fade-in-left');
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                if (rect.top <= viewHeight && rect.bottom >= 0) {
+                    setIsVisible(true);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Call once to set initial state
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const element = document.querySelector('.fade-in-right');
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                if (rect.top <= viewHeight && rect.bottom >= 0) {
+                    setIsVisible(true);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Call once to set initial state
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <div>
             {/* NavBar */}
             <Navbar />
             {/* body */}
-
             <section style={backg_quokka}>
                 <div className='container text-start text-white quokka fs-1' style={{ paddingTop: '170vh' }}>
                     <h1>¿Cómo volverte <br /> voluntario de POW?</h1>
@@ -46,23 +84,23 @@ function Voluntario() {
 
             <section className='d-flex flex-column' style={{}}>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{marginTop:"7vh"}}>
+                <div className={`block beige d-flex justify-content-center align-items-center text-center fade-in-left ${isVisible ? 'visible' : ''}`} style={{ marginTop: "7vh" }}>
                     <h3>Edad mínima es 18 años.</h3>
                 </div>
 
-                <div className="block dark-green d-flex align-self-end align-items-center text-center justify-content-center">
+                <div className={`block dark-green d-flex align-self-end align-items-center text-center justify-content-center fade-in-right ${isVisible ? 'visible' : ''}`}>
                     <h3>Salud: Buen estado físico y mental, especialmente para trabajos de campo.</h3>
                 </div>
 
-                <div className="block light-green d-flex align-items-center text-center justify-content-center">
+                <div className={`block light-green d-flex align-items-center text-center justify-content-center fade-in-left ${isVisible ? 'visible' : ''}`}>
                     <h3>Compromiso de tiempo: Proyectos desde 2 semanas hasta 6 meses o más.</h3>
                 </div>
 
-                <div className="block dark-green d-flex align-self-end align-items-center text-center justify-content-center">
+                <div className={`block dark-green d-flex align-self-end align-items-center text-center justify-content-center fade-in-right ${isVisible ? 'visible' : ''}`}>
                     <h3>Capacitación Específica: Asistir y completar sesiones de capacitación.</h3>
                 </div>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{marginBottom:"7vh"}}>
+                <div className={`block beige d-flex justify-content-center align-items-center text-center fade-in-left ${isVisible ? 'visible' : ''}`} style={{ marginBottom: "7vh" }}>
                     <h3>Pasión por la Conservación: Un interés genuino por la vida silvestre y ecosistemas naturales.</h3>
                 </div>
             </section>
@@ -75,7 +113,7 @@ function Voluntario() {
 
             <section className='d-flex flex-column'>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{marginTop:"7vh"}}>
+                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{ marginTop: "7vh" }}>
                     <h3>Impacto real en la conservación.</h3>
                 </div>
 
@@ -91,7 +129,7 @@ function Voluntario() {
                     <h3>Experiencia Única.</h3>
                 </div>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{marginBottom:"7vh"}}>
+                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{ marginBottom: "7vh" }}>
                     <h3>Contribución a la Conservación.</h3>
                 </div>
 
@@ -130,7 +168,7 @@ function Voluntario() {
                                 aria-describedby="basic-addon1"
                             />
                         </div>
-                        
+
                         <div className="input-group mb-3 w-50">
                             <input
                                 type="text"
@@ -204,7 +242,7 @@ function Voluntario() {
             {/* Testimonios */}
             <section className='bg-light'>
                 <div className='container texto-verde' style={{ padding: '10vh' }}>
-                    
+
                     <div id="testimoniosCarousel" className="carousel slide mt-5" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active">
