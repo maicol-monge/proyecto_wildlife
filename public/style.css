@@ -265,20 +265,20 @@ de aqui para lo de los testimonios*/
 .beige {
     background-color: #E9E7CD;
     color: #333;
-    height: 30vh;
-    margin-top: 10vh;
+    height: 20vh;
+    margin-top: 5vh;
 }
 
 .dark-green {
     background-color: #1A4D2E;
-    height: 30vh;
+    height: 20vh;
 }
 
 .light-green {
     background-color: #6DAE40;
     color: #ffffff;
-    height: 30vh;
-    margin-bottom: 10vh;
+    height: 20vh;
+    margin-bottom: 5vh;
 }
 
 .datos_personales{
