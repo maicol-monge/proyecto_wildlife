@@ -32,7 +32,7 @@ function Voluntario() {
 
             <section style={{ backgroundColor: '#6DAE40' }}>
                 <div className="container d-flex justify-content-center align-items-center text-center" style={{ paddingTop: '15vh', paddingBottom: '15vh' }}>
-                    <h3>POW es una organización de la ONU que trabaja en la protección de animales y su hábitat.
+                    <h3 className='text-light'>POW es una organización de la ONU que trabaja en la protección de animales y su hábitat.
                         Si te apasiona la conservación y quieres ayudar, puedes unirte como voluntario. </h3>
                 </div>
             </section>
