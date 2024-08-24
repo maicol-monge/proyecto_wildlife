@@ -1,0 +1,300 @@
+div {
+    font-family: League Spartan;
+}
+
+.bg-navbar {
+    background-color: #1A4D2E;
+}
+
+.bg-btn-navbar {
+    background-color: #1F4226;
+}
+
+.btn-sin-borde {
+    border: 'none'
+}
+
+.texto-header {
+    font-size: 14vh;
+}
+
+.bg-btn-header {
+    background-color: #488B1A;
+}
+
+.texto-intro h1 {
+    font-size: 10vh;
+    font-weight: bold;
+    color: #809385;
+}
+
+.texto-intro p {
+    font-size: 4vh;
+    color: #E7F8ED;
+    text-align: justify;
+    line-height: 2;
+}
+
+.btn-intro {
+    color: #1F4226;
+    font-size: 4vh;
+}
+
+.backgroundStyleProyectos {
+    background: linear-gradient(to bottom, #212D24, #809385);
+}
+
+.texto-proyecto h1 {
+    font-size: 10vh;
+    font-weight: bold;
+    color: #E7F8ED;
+}
+
+.bg-card {
+    background-color: #809385;
+}
+
+.no-decoration {
+    text-decoration: none;
+    color: inherit;
+}
+
+.texto-verde {
+    color: #1F4226;
+}
+
+/* 
+de aqui para lo de los testimonios*/
+
+.carousel-inner input {
+    display: none;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+}
+
+.carousel-inner input:checked+.carousel-item {
+    display: block;
+}
+
+.carousel-indicators label {
+    width: 15px;
+    height: 15px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.carousel-indicators label:hover,
+.carousel-indicators label:active {
+    background-color: #333;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #000;
+    /* Color de fondo del indicador */
+    border-radius: 50%;
+    /* Forma redonda */
+    width: 12px;
+    /* Ancho del indicador */
+    height: 12px;
+    /* Altura del indicador */
+}
+
+.carousel-indicators .active {
+    background-color: #1F4226;
+    /* Color de fondo del indicador activo */
+}
+
+/* fin testimonios :) */
+
+.bg-footer {
+    background-color: #203324;
+}
+
+.ourHistory H1 {
+    font-size: 80px;
+}
+
+.ourHistory p {
+    font-size: 25px;
+}
+
+.misionandvision h1 {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+}
+
+.misionandvision p {
+    font-size: 25px;
+    color: white;
+    padding-left: 15vh;
+    padding-right: 15vh;
+}
+
+.divider {
+    width: 1px;
+    background-color: white;
+    height: 100%;
+}
+
+.elephants {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: auto;
+}
+
+.txtDonar {
+    font-size: 15vh;
+}
+
+.txtVidaSalvaje {
+    font-family: Kalam;
+}
+
+.btn-donar {
+    background-color: #1A4D2E;
+    font-size: 4vh;
+}
+
+.btn-donar {
+    background-color: #1A4D2E;
+    font-size: 3vh;
+}
+
+.fondo-donar {
+    background-color: #E9E7CD;
+}
+
+.pinos {
+
+    margin-top: -8vh;
+    margin-left: -20vh;
+    margin-right: 0vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    overflow: hidden;
+    letter-spacing: -15em;
+
+}
+
+.pino1,
+.pino2 {
+    font-size: 70vh;
+    line-height: 1;
+}
+
+.pino1 {
+    color: #203324;
+}
+
+.pino2 {
+    color: #1A4D2E;
+}
+
+.footer-donar {
+    margin-top: -10vh;
+    /* Superpone el footer sobre los pinos */
+}
+
+.bird {
+    position: absolute;
+}
+
+.bird1 {
+    top: 500px;
+    left: 20px;
+}
+
+.bird2 {
+    top: 150px;
+    left: 1100px;
+}
+
+.bird3 {
+    top: 700px;
+    left: 1000px;
+}
+
+.quokka h1{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.gradiente-section {
+    background: linear-gradient(to right, 
+        #1A271D 10%,  /* Primer color */
+        #203324 10% 25%,  /* Segundo color */
+        #1A4D2E 25% 75%,  /* Color central (más ancho) */
+        #203324 75% 90%,  /* Segundo color */
+        #1A271D 90%);  /* Primer color */
+    padding: 20px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.requisitos-text {
+    color: #FFFFFF; /* Color del texto */
+    font-weight: bold;
+    font-size: 35px;
+    margin: 0;
+}
+
+.block {
+    width: 80%;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    
+}
+
+.beige {
+    background-color: #E9E7CD;
+    color: #333;
+    height: 30vh;
+    margin-top: 20vh;
+}
+
+.dark-green {
+    background-color: #1A4D2E;
+    height: 30vh;
+}
+
+.light-green {
+    background-color: #6DAE40;
+    color: #ffffff;
+    height: 30vh;
+    margin-bottom: 20vh;
+}
+
+.datos_personales{
+    background-color: #1A4D2E;
+    padding: 5vh;
+}
+.personal{
+    background-color: #E9E7CD;
+    padding: 5vh;
+}
+
+.btnSendForm{
+    background-color: #6DAE40;
+    border-radius: 20px;
+    height:7vh;
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
