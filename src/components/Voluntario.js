@@ -59,11 +59,11 @@ function Voluntario() {
                 </div>
 
                 <div className="block dark-green d-flex align-self-end align-items-center text-center justify-content-center">
-                    <h3>Capacitación Específica: Asistir y completar sesiones de capacitación proporcionadas por la fundación, que pueden incluir manejo de animales, seguridad, y procedimientos de emergencia.</h3>
+                    <h3>Capacitación Específica: Asistir y completar sesiones de capacitación.</h3>
                 </div>
 
                 <div className="block beige d-flex justify-content-center align-items-center text-center">
-                    <h3>Pasión por la Conservación: Un interés genuino por la vida silvestre y la conservación de los ecosistemas naturales.</h3>
+                    <h3>Pasión por la Conservación: Un interés genuino por la vida silvestre y ecosistemas naturales.</h3>
                 </div>
             </section>
 
@@ -85,6 +85,14 @@ function Voluntario() {
 
                 <div className="block light-green d-flex align-items-center text-center justify-content-center">
                     <h3>Conexiones globales con personas afines.</h3>
+                </div>
+
+                <div className="block dark-green d-flex align-self-end align-items-center text-center justify-content-center">
+                    <h3>Experiencia Única.</h3>
+                </div>
+
+                <div className="block beige d-flex justify-content-center align-items-center text-center">
+                    <h3>Contribución a la Conservación.</h3>
                 </div>
 
             </section>
