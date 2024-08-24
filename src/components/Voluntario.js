@@ -18,6 +18,7 @@ function Voluntario() {
         backgroundRepeat: 'no-repeat',
         height: '200vh' // O el alto que prefieras
     };
+
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
