@@ -58,6 +58,13 @@ function Voluntario() {
                     <h3>Compromiso de tiempo: Proyectos desde 2 semanas hasta 6 meses o más.</h3>
                 </div>
 
+                <div className="block dark-green d-flex align-self-end align-items-center text-center justify-content-center">
+                    <h3>Capacitación Específica: Asistir y completar sesiones de capacitación proporcionadas por la fundación, que pueden incluir manejo de animales, seguridad, y procedimientos de emergencia.</h3>
+                </div>
+
+                <div className="block beige d-flex justify-content-center align-items-center text-center">
+                    <h3>Pasión por la Conservación: Un interés genuino por la vida silvestre y la conservación de los ecosistemas naturales.</h3>
+                </div>
             </section>
 
             <section class="gradiente-section">
