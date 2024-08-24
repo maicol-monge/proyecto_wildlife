@@ -46,7 +46,7 @@ function Voluntario() {
 
             <section className='d-flex flex-column' style={{}}>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center">
+                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{marginTop:"7vh"}}>
                     <h3>Edad mínima es 18 años.</h3>
                 </div>
 
@@ -62,7 +62,7 @@ function Voluntario() {
                     <h3>Capacitación Específica: Asistir y completar sesiones de capacitación.</h3>
                 </div>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center">
+                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{marginBottom:"7vh"}}>
                     <h3>Pasión por la Conservación: Un interés genuino por la vida silvestre y ecosistemas naturales.</h3>
                 </div>
             </section>
@@ -75,7 +75,7 @@ function Voluntario() {
 
             <section className='d-flex flex-column'>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center">
+                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{marginTop:"7vh"}}>
                     <h3>Impacto real en la conservación.</h3>
                 </div>
 
@@ -91,7 +91,7 @@ function Voluntario() {
                     <h3>Experiencia Única.</h3>
                 </div>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center">
+                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{marginBottom:"7vh"}}>
                     <h3>Contribución a la Conservación.</h3>
                 </div>
 

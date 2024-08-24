@@ -258,7 +258,6 @@ de aqui para lo de los testimonios*/
     font-size: 18px;
     text-align: center;
     margin-top: 5vh;
-    margin-bottom: 5vh;
     
 }
 
@@ -266,19 +265,21 @@ de aqui para lo de los testimonios*/
     background-color: #E9E7CD;
     color: #333;
     height: 20vh;
-    margin-top: 5vh;
+    
+    
 }
 
 .dark-green {
     background-color: #1A4D2E;
     height: 20vh;
+    
 }
 
 .light-green {
     background-color: #6DAE40;
     color: #ffffff;
     height: 20vh;
-    margin-bottom: 5vh;
+    
 }
 
 .datos_personales{
