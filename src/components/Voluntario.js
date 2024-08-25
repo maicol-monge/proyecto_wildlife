@@ -18,7 +18,6 @@ function Voluntario() {
         backgroundRepeat: 'no-repeat',
         height: '200vh' // O el alto que prefieras
     };
-
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -114,23 +113,23 @@ function Voluntario() {
 
             <section className='d-flex flex-column'>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{ marginTop: "7vh" }}>
+                <div className={`block beige d-flex justify-content-center align-items-center text-center fade-in-left ${isVisible ? 'visible' : ''}`} style={{ marginTop: "7vh" }}>
                     <h3>Impacto real en la conservación.</h3>
                 </div>
 
-                <div className="block dark-green d-flex align-self-end align-items-center text-center justify-content-center">
+                <div className={`block dark-green d-flex align-self-end align-items-center text-center justify-content-center fade-in-right ${isVisible ? 'visible' : ''}`}>
                     <h3>Aprendizaje y desarrollo personal</h3>
                 </div>
 
-                <div className="block light-green d-flex align-items-center text-center justify-content-center">
+                <div className={`block light-green d-flex align-items-center text-center justify-content-center fade-in-left ${isVisible ? 'visible' : ''}`}>
                     <h3>Conexiones globales con personas afines.</h3>
                 </div>
 
-                <div className="block dark-green d-flex align-self-end align-items-center text-center justify-content-center">
+                <div className={`block dark-green d-flex align-self-end align-items-center text-center justify-content-center fade-in-right ${isVisible ? 'visible' : ''}`}>
                     <h3>Experiencia Única.</h3>
                 </div>
 
-                <div className="block beige d-flex justify-content-center align-items-center text-center" style={{ marginBottom: "7vh" }}>
+                <div className={`block beige d-flex justify-content-center align-items-center text-center fade-in-left ${isVisible ? 'visible' : ''}`} style={{ marginBottom: "7vh" }}>
                     <h3>Contribución a la Conservación.</h3>
                 </div>
 
