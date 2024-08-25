@@ -342,3 +342,13 @@ de aqui para lo de los testimonios*/
     opacity: 1;
     transform: translateX(0);
 }
+
+.fondoTituloAcordion{
+    background-color:#1A4D2E;
+}
+
+.custom-accordion .custom-button:not(.collapsed) {
+    background-color: #A7EBB9; /* Color de fondo cuando está abierto */
+    color: #000; /* Color del texto */
+  }
+  
