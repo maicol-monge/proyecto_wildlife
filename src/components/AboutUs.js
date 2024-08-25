@@ -54,13 +54,16 @@ function About_us() {
 
             <section style={{ backgroundColor: '#1F4226' }}>
                 <div className='container d-flex misionandvision' style={{ paddingTop: '15vh', paddingBottom: '15vh' }} >
+
                     <div className='mision'>
                         <h1>MISIÓN</h1>
                         <p>Proteger y conservar la vida silvestre a través de acciones educativas, programas de conservación y proyectos de investigación, fomentando
                             la convivencia armoniosa entre las comunidades humanas y los ecosistemas naturales para garantizar un futuro sostenible para todas las especies.</p>
-                        <img src={elefante} alt="elefante" className='w-50' />
+                        <img src={elefante} alt="elefante" className='w-50 d-flex align-items-center' />
                     </div>
-                    <div className="divider"></div>
+
+                    <div className="divider">.</div>
+
                     <div className='vision'>
                         <p>Ser una organización líder a nivel mundial en la preservación de la vida silvestre, reconocida por nuestro impacto positivo en la biodiversidad y por
                             inspirar a las personas y comunidades a valorar y proteger los recursos naturales para las generaciones futuras.</p>
