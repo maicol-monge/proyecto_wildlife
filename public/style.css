@@ -353,5 +353,8 @@ de aqui para lo de los testimonios*/
 .custom-accordion .custom-button:not(.collapsed) {
     background-color: #A7EBB9; /* Color de fondo cuando está abierto */
     color: #000; /* Color del texto */
-  }
-  
+}
+
+.cardd:hover{
+    box-shadow: 0 4px 8px #1A4D2E, 0 6px 20px #1A4D2E;
+}

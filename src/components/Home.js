@@ -85,7 +85,7 @@ function Home() {
           </div>
           <div className='d-flex justify-content-evenly' style={{ paddingTop: '12vh' }}>
             {/* card 1 */}
-            <div className="card" style={{ width: '20rem' }}>
+            <div className="card cardd" style={{ width: '20rem' }}>
               <img src={puma} className="card-img-top" alt="..." style={{ height: '30rem' }} />
               <div className="card-body bg-card text-light text-center">
                 <h5 className="card-title fw-bold ">Santuario de Pumas</h5>
@@ -98,7 +98,7 @@ function Home() {
               </div>
             </div>
             {/* card 2 */}
-            <div className="card" style={{ width: '20rem' }}>
+            <div className="card cardd" style={{ width: '20rem' }}>
               <img src={primate} className="card-img-top" alt="..." style={{ height: '30rem' }} />
               <div className="card-body bg-card text-light text-center">
                 <h5 className="card-title fw-bold ">Conservación de Primates</h5>
@@ -114,7 +114,7 @@ function Home() {
 
           <div className='d-flex justify-content-evenly' style={{ paddingTop: '12vh' }}>
             {/* card 3 */}
-            <div className="card" style={{ width: '20rem' }}>
+            <div className="card cardd" style={{ width: '20rem' }}>
               <img src={elente_solo} className="card-img-top" alt="..." style={{ height: '30rem' }} />
               <div className="card-body bg-card text-light text-center">
                 <h5 className="card-title fw-bold ">Preservación de Elefantes</h5>
@@ -127,7 +127,7 @@ function Home() {
               </div>
             </div>
             {/* card 4 */}
-            <div className="card" style={{ width: '20rem' }}>
+            <div className="card cardd" style={{ width: '20rem' }}>
               <img src={wallaby} className="card-img-top" alt="..." style={{ height: '30rem' }} />
               <div className="card-body bg-card text-light text-center">
                 <h5 className="card-title fw-bold ">Protección de Marsupiales</h5>
