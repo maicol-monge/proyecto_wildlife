@@ -7,7 +7,7 @@ import bird3 from './images/bird3.png';
 
 
 function Preguntas() {
-    
+
 
     const scrollToDonar = () => {
         document.getElementById('Donar').scrollIntoView({ behavior: 'smooth' });
@@ -16,13 +16,32 @@ function Preguntas() {
     return (
         <div>
             {/* NavBar */}
-            <Navbar/>
+            <Navbar />
             {/* body */}
-            
+            <section className='p-5'>
 
+                <div className='container'>
+                    <div className='texto-verde text-center'>
+                        <h1 className='fw-bold'>Preguntas Frecuentes</h1>
+                    </div>
+                    <div className="input-group mb-3 p-5">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Buscar 🔍"
+                            aria-label="Buscar 🔍"
+                            aria-describedby="button-addon2"
+                        />
+                        <button className="btn btn-outline-success" type="button" id="button-addon2">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+
+            </section>
 
             {/* Footer */}
-            <section className='bg-footer text-light p-3 footer-donar'>
+            <section className='bg-footer text-light p-3'>
                 <div className='container'>
                     <div className='row d-flex justify-content-between'>
                         <div className='col-md-2 d-flex justify-content-between fs-4'>
