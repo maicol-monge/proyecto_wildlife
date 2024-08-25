@@ -64,6 +64,9 @@ function Navbar() {
                                     <li className="nav-item">
                                         <Link className="nav-link active" aria-current="page" to="/donar">Donar</Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link active" aria-current="page" to="/preguntas">Preguntas Frecuentes</Link>
+                                    </li>
                                 </ul>
                                 <form className="d-flex mt-3" role="search">
                                     <input
