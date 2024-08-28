@@ -7,6 +7,7 @@ import JuanPerez from './images/chico camara.jpg';
 import MariaLopez from './images/chica lago.jpg';
 import quoteLeft from './images/comilla-left.png';
 import quoteRight from './images/comilla-right.png';
+import garra from './images/garra.png';
 
 
 function Voluntario() {
@@ -143,7 +144,7 @@ function Voluntario() {
 
             <section className='custom-cursor datos_personales '>
                 <div className='custom-cursor container personal d-flex flex-column'>
-
+                    
                     <h3 className='text-center'>Datos personales</h3>
 
                     <br />
@@ -465,7 +466,7 @@ function Voluntario() {
                     <br />
 
                     <div className='d-flex justify-content-center'>
-                        <button className='btnSendForm btn-apoyo w-25'>Enviar Formulario</button>
+                        <button className='btnSendForm btn-apoyo w-25 custom-cursor'>Enviar Formulario</button>
                     </div>
 
 
