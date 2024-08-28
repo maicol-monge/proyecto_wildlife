@@ -150,44 +150,36 @@ function Voluntario() {
 
                     <div className='data_imput d-flex flex-column align-items-center'>
 
-                        <div className="input-group mb-3 w-50">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Nombre"
-                                aria-label="Nombre"
-                                aria-describedby="basic-addon1" />
+                        <div class="nombre input-group w-50" style={{marginBottom:"5vh"}}>
+                            <input required type="text" class="input" />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Nombre</label>
                         </div>
 
-                        <div className="input-group mb-3 w-50">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Apellido"
-                                aria-label="Apellido"
-                                aria-describedby="basic-addon1"
-                            />
+                        <div class="nombre input-group w-50 mb-5" >
+                            <input required type="text" class="input" />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Apellido</label>
                         </div>
 
-                        <div className="input-group mb-3 w-50">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Edad"
-                                aria-label="Edad"
-                                aria-describedby="basic-addon1"
-                            />
+                        <div class="nombre input-group w-50 mb-5" >
+                            <input required type="text" class="input" />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Edad</label>
                         </div>
 
-                        <div class="input-group mb-3 w-50">
-                            <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Correo"
-                                aria-label="Correo"
-                                aria-describedby="basic-addon2" />
-                            <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                        <div class="nombre input-group w-50 mb-5" >
+                            <input required type="text" class="input" />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Correo</label>
+                            
                         </div>
+
+                        
 
                         <div className='d-flex justify-content-between w-50'>
 
@@ -200,7 +192,7 @@ function Voluntario() {
                                 </select>
                             </div>
 
-                            <div className="mb-3 w-25">
+                            <div className="mb-3 w-25" style={{backgroundColor:"transparent"}}>
                                 <label htmlFor="volunteerType" className="form-label">País:</label>
                                 <select className="form-select" id="volunteerType">
                                     <option value="pais1">El Salvador</option>
@@ -220,8 +212,6 @@ function Voluntario() {
                                 aria-describedby="basic-addon1"
                             />
                         </div>
-
-                        
 
                     </div>
 
