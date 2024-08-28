@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import bird1 from './images/bird1.png';
 import bird2 from './images/bird2.png';
 import bird3 from './images/bird3.png';
-
+import soundFile from './images/tigerr.mp3';
 
 function Donar() {
     
@@ -12,6 +12,25 @@ function Donar() {
     const scrollToDonar = () => {
         document.getElementById('Donar').scrollIntoView({ behavior: 'smooth' });
     };
+    useEffect(() => {
+        const button = document.getElementById('btnSendForm');
+        const clickSound = document.getElementById('clickSound');
+
+        if (button && clickSound) {
+            button.addEventListener('click', () => {
+                clickSound.play();
+            });
+        }
+
+        // Limpieza del evento cuando el componente se desmonte
+        return () => {
+            if (button) {
+                button.removeEventListener('click', () => {
+                    clickSound.play();
+                });
+            }
+        };
+    }, []);
 
     return (
         <div>
@@ -87,9 +106,10 @@ function Donar() {
                             />
                         </div>
                         <div className='d-flex justify-content-center' style={{ paddingTop: '5vh', paddingBottom: '5vh' }}>
-                            <Link to="" className="btn btn-light m-2 text-light fw-bold btn-donar" style={{ width: '20vh' }}>
+                            <Link to="" className="btn btn-light m-2 text-light fw-bold btn-donar" id='btnSendForm' style={{ width: '20vh' }}>
                                 ¡Donar!
                             </Link>
+                            <audio id="clickSound" src={soundFile} preload="auto"></audio>
                         </div>
                     </div>
                 </div>
