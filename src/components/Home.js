@@ -45,10 +45,10 @@ function Home() {
         <div className='container text-light d-flex flex-column align-items-center' style={{ paddingTop: '120vh' }}>
           <h1 className='texto-header'>Unidos por la Vida Salvaje</h1>
           <div>
-            <Link to="/voluntario" className="btn text-light m-2 fs-5 bg-btn-header" style={{ width: '40vh' }}>
+            <Link to="/voluntario" className="btn btn-apoyo text-light m-2 fs-5 bg-btn-header" style={{ width: '50vh' }}>
               Registrate como voluntario
             </Link>
-            <Link to="/donar" className="btn text-light m-2 fs-5 bg-btn-header" style={{ width: '40vh' }}>
+            <Link to="/donar" className="btn btn-apoyo text-light m-2 fs-5 bg-btn-header" style={{ width: '50vh' }}>
               Apoya la vida salvaje
             </Link>
           </div>
