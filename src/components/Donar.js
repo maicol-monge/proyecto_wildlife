@@ -35,9 +35,9 @@ function Donar() {
                 </div>
             </section>
 
-            <section id='Donar' className='fondo-donar pt-5'>
+            <section id='Donar' className='fondo-donar pt-5 '>
                 <img src={bird3} className="bird bird3 w-25" alt="Bird 2" />
-                <div className='bg-light p-5 texto-verde text-center w-75' style={{ border: '5px solid #1F4226' }}>
+                <div className='bg-light p-5 texto-verde text-center w-75 custom-cursor' style={{ border: '5px solid #1F4226' }}>
                     <h1 className='fw-bold py-4'>Apoya a Protect Our WildLife</h1>
                     <div>
                         <div className="input-group my-3 w-75">

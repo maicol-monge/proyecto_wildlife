@@ -37,7 +37,7 @@ function Home() {
 
 
   return (
-    <div>
+    <div className=''>
       {/* NavBar */}
       <Navbar/>
       {/* header */}
