@@ -8,6 +8,7 @@ import MariaLopez from './images/chica lago.jpg';
 import quoteLeft from './images/comilla-left.png';
 import quoteRight from './images/comilla-right.png';
 import soundFile from './images/tigerr.mp3';
+
 function Voluntario() {
 
     const backg_quokka = {
