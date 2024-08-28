@@ -5,6 +5,9 @@ import Navbar from './Navbar';
 import backg2 from './images/jaguar.jpg';
 import elefante from './images/-elefante.png';
 import jirafa from './images/jirafa.jpg';
+import elefante_sound from './images/ele';
+import soundFile from './images/';
+
 
 function About_us() {
     const backgroundStyle = {
@@ -29,6 +32,26 @@ function About_us() {
         backgroundRepeat: 'no-repeat',
         height: '100vh' // O el alto que prefieras
     };
+
+    useEffect(() => {
+        const button = document.getElementById('btnSendForm');
+        const clickSound = document.getElementById('clickSound');
+
+        if (button && clickSound) {
+            button.addEventListener('click', () => {
+                clickSound.play();
+            });
+        }
+
+        // Limpieza del evento cuando el componente se desmonte
+        return () => {
+            if (button) {
+                button.removeEventListener('click', () => {
+                    clickSound.play();
+                });
+            }
+        };
+    }, []);
 
     return (
         <div>
