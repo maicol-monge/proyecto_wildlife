@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import guardarecursos from './images/GuardaRecursos.webp';
 import hojas from './images/hojas.png';
 import gacela from './images/gacela.png';
-
+import soundFile from './images/tigerr.mp3';
 
 
 function Contacto() {
@@ -16,6 +16,26 @@ function Contacto() {
         backgroundRepeat: 'no-repeat',
         height: '110vh' // O el alto que prefieras
     };
+
+    useEffect(() => {
+        const button = document.getElementById('btnSendForm');
+        const clickSound = document.getElementById('clickSound');
+
+        if (button && clickSound) {
+            button.addEventListener('click', () => {
+                clickSound.play();
+            });
+        }
+
+        // Limpieza del evento cuando el componente se desmonte
+        return () => {
+            if (button) {
+                button.removeEventListener('click', () => {
+                    clickSound.play();
+                });
+            }
+        };
+    }, []);
 
     const scrollToForm = () => {
         document.getElementById('Form').scrollIntoView({ behavior: 'smooth' });
@@ -354,7 +374,8 @@ function Contacto() {
                         </div>
 
                         <div className='d-flex justify-content-start mt-5'>
-                            <button className='btnSendForm btn-apoyo w-25'>Enviar Mensaje</button>
+                            <button className='btnSendForm btn-apoyo w-25' id='btnSendForm'>Enviar Mensaje</button>
+                            <audio id="clickSound" src={soundFile} preload="auto"></audio>
                         </div>
 
                     </div>
