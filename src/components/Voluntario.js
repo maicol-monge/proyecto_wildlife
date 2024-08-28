@@ -7,9 +7,7 @@ import JuanPerez from './images/chico camara.jpg';
 import MariaLopez from './images/chica lago.jpg';
 import quoteLeft from './images/comilla-left.png';
 import quoteRight from './images/comilla-right.png';
-import garra from './images/garra.png';
-
-
+import soundFile from './images/tigerr.mp3';
 function Voluntario() {
 
     const backg_quokka = {
@@ -19,7 +17,27 @@ function Voluntario() {
         backgroundRepeat: 'no-repeat',
         height: '200vh' // O el alto que prefieras
     };
-    
+
+    useEffect(() => {
+        const button = document.getElementById('btnSendForm');
+        const clickSound = document.getElementById('clickSound');
+
+        if (button && clickSound) {
+            button.addEventListener('click', () => {
+                clickSound.play();
+            });
+        }
+
+        // Limpieza del evento cuando el componente se desmonte
+        return () => {
+            if (button) {
+                button.removeEventListener('click', () => {
+                    clickSound.play();
+                });
+            }
+        };
+    }, []);
+
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -185,16 +203,16 @@ function Voluntario() {
                             <div className="mb-5 w-25" >
                                 <label htmlFor="volunteerType" className="form-label" >Tipo de Voluntario:</label>
                                 <select className="form-select" style={{ backgroundColor: "transparent" }} id="volunteerType">
-                                        <option value="rescate">Voluntario de Rescate y Rehabilitación</option>
-                                        <option value="educacion">Voluntario de Educación y Concienciación</option>
-                                        <option value="monitoreo">Voluntario de Monitoreo y Observación</option>
-                                        <option value="conservacion">Voluntario de Conservación de Hábitats</option>
-                                        <option value="veterinario">Voluntario de Apoyo Veterinario</option>
-                                        <option value="administracion">Voluntario de Gestión y Administración</option>
-                                        <option value="comunicacion">Voluntario de Comunicación y Redes Sociales</option>
-                                        <option value="manejo">Voluntario de Captura y Manejo</option>
-                                        <option value="investigacion">Voluntario de Investigación</option>
-                                        <option value="educacion-ninos">Voluntario de Educación Ambiental para Niños</option>
+                                    <option value="rescate">Voluntario de Rescate y Rehabilitación</option>
+                                    <option value="educacion">Voluntario de Educación y Concienciación</option>
+                                    <option value="monitoreo">Voluntario de Monitoreo y Observación</option>
+                                    <option value="conservacion">Voluntario de Conservación de Hábitats</option>
+                                    <option value="veterinario">Voluntario de Apoyo Veterinario</option>
+                                    <option value="administracion">Voluntario de Gestión y Administración</option>
+                                    <option value="comunicacion">Voluntario de Comunicación y Redes Sociales</option>
+                                    <option value="manejo">Voluntario de Captura y Manejo</option>
+                                    <option value="investigacion">Voluntario de Investigación</option>
+                                    <option value="educacion-ninos">Voluntario de Educación Ambiental para Niños</option>
                                 </select>
                             </div>
 
@@ -466,7 +484,10 @@ function Voluntario() {
                     <br />
 
                     <div className='d-flex justify-content-center'>
-                        <button className='btnSendForm btn-apoyo w-25 '>Enviar Formulario</button>
+                        <button className='btnSendForm btn-apoyo w-25 ' id='btnSendForm'>Enviar Formulario
+                        </button>
+                        <audio id="clickSound" src={soundFile} preload="auto"></audio>
+                        
                     </div>
 
 
