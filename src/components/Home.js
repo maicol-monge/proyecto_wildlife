@@ -12,7 +12,7 @@ import cocodrilo from './images/cocodrilo.jpg';
 import AnaMartinez from './images/Ana.jpg';
 import JuanPerez from './images/chico camara.jpg';
 import MariaLopez from './images/chica lago.jpg';
-import quoteLeft from './images/comilla-left.png'; 
+import quoteLeft from './images/comilla-left.png';
 import quoteRight from './images/comilla-right.png';
 
 
@@ -34,12 +34,37 @@ function Home() {
     height: '200vh',
   };
 
+  useEffect(() => {
+    // Selecciona todas las tarjetas con las clases de animación
+    const cards = document.querySelectorAll('.card');
+
+    // Configura el IntersectionObserver
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Agrega la clase 'in-view' cuando la tarjeta esté en vista
+          entry.target.classList.add('in-view');
+        }
+      });
+    });
+
+    // Observa cada tarjeta
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+
+    // Limpieza al desmontar el componente
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
 
 
   return (
     <div className=''>
       {/* NavBar */}
-      <Navbar/>
+      <Navbar />
       {/* header */}
       <section style={backgroundStyleHeader}>
         <div className='container text-light d-flex flex-column align-items-center' style={{ paddingTop: '120vh' }}>
@@ -85,7 +110,7 @@ function Home() {
           </div>
           <div className='d-flex justify-content-evenly' style={{ paddingTop: '12vh' }}>
             {/* card 1 */}
-            <div className="card cardd" style={{ width: '20rem' }}>
+            <div className="card slide-left" style={{ width: '20rem' }}>
               <img src={puma} className="card-img-top" alt="..." style={{ height: '30rem' }} />
               <div className="card-body bg-card text-light text-center">
                 <h5 className="card-title fw-bold ">Santuario de Pumas</h5>
@@ -98,7 +123,7 @@ function Home() {
               </div>
             </div>
             {/* card 2 */}
-            <div className="card cardd" style={{ width: '20rem' }}>
+            <div className="card slide-right" style={{ width: '20rem' }}>
               <img src={primate} className="card-img-top" alt="..." style={{ height: '30rem' }} />
               <div className="card-body bg-card text-light text-center">
                 <h5 className="card-title fw-bold ">Conservación de Primates</h5>
@@ -114,7 +139,7 @@ function Home() {
 
           <div className='d-flex justify-content-evenly' style={{ paddingTop: '12vh' }}>
             {/* card 3 */}
-            <div className="card cardd" style={{ width: '20rem' }}>
+            <div className="card slide-left" style={{ width: '20rem' }}>
               <img src={elente_solo} className="card-img-top" alt="..." style={{ height: '30rem' }} />
               <div className="card-body bg-card text-light text-center">
                 <h5 className="card-title fw-bold ">Preservación de Elefantes</h5>
@@ -127,7 +152,7 @@ function Home() {
               </div>
             </div>
             {/* card 4 */}
-            <div className="card cardd" style={{ width: '20rem' }}>
+            <div className="card slide-right" style={{ width: '20rem' }}>
               <img src={wallaby} className="card-img-top" alt="..." style={{ height: '30rem' }} />
               <div className="card-body bg-card text-light text-center">
                 <h5 className="card-title fw-bold ">Protección de Marsupiales</h5>
@@ -145,6 +170,7 @@ function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Eventos */}
       <section>
@@ -186,12 +212,12 @@ function Home() {
                 <div className="carousel-caption d-none d-md-block">
                   <div className='text-center' style={{ paddingBottom: '60vh' }}>
                     <h1>Campaña de Concientización de la Importancia de Cocrodilos</h1>
-                    <p className='fs-5' style={{ textAlign: 'justify' }}>La Campaña de 
-                      Concientización de la Importancia de Cocodrilos es un evento organizado 
-                      por la ONG Protect Our Wildlife (POW) para educar al público sobre la crucial 
-                      función ecológica de los cocodrilos y la necesidad de su conservación. Este 
-                      evento incluye una serie de actividades diseñadas para informar y sensibilizar 
-                      a la comunidad sobre los beneficios de los cocodrilos para los ecosistemas acuáticos 
+                    <p className='fs-5' style={{ textAlign: 'justify' }}>La Campaña de
+                      Concientización de la Importancia de Cocodrilos es un evento organizado
+                      por la ONG Protect Our Wildlife (POW) para educar al público sobre la crucial
+                      función ecológica de los cocodrilos y la necesidad de su conservación. Este
+                      evento incluye una serie de actividades diseñadas para informar y sensibilizar
+                      a la comunidad sobre los beneficios de los cocodrilos para los ecosistemas acuáticos
                       y los desafíos que enfrentan debido a la pérdida de hábitat y otras amenazas.</p>
                   </div>
                   <div className='d-flex flex-column justify-content-start text-start'>
