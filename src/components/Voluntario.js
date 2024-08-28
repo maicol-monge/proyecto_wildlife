@@ -221,12 +221,20 @@ function Voluntario() {
                             />
                         </div>
 
+                        <div class="form-control">
+                            <input type="value" required="">
+                                <label>
+                                    <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+                                </label>
+                            </input>
+                        </div>
+
                     </div>
 
                     <br />
 
                     <div className='d-flex justify-content-center'>
-                        <button className='btnSendForm w-25'>Enviar Formulario</button>
+                        <button className='btnSendForm btn-apoyo w-25'>Enviar Formulario</button>
                     </div>
 
 
