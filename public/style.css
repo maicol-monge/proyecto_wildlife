@@ -330,6 +330,100 @@ de aqui para lo de los testimonios*/
   padding: 5vh;
 }
 
+/* From Uiverse.io by G4b413l */
+.nombre {
+  position: relative;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.input:focus {
+  outline: none;
+}
+
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #488b1a;
+}
+
+.bar {
+  display: block;
+  width: 50%x;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #488b1a;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.input:focus ~ .bar:before,
+.input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
 .btnSendForm {
   background-color: #6dae40;
   border-radius: 20px;
@@ -385,8 +479,8 @@ de aqui para lo de los testimonios*/
   color: #000; /* Color del texto */
 }
 
-.cardd:hover{
-    box-shadow: 0 4px 8px #1A4D2E, 0 6px 20px #1A4D2E;
+.cardd:hover {
+  box-shadow: 0 4px 8px #1a4d2e, 0 6px 20px #1a4d2e;
 }
 
 .cardd:hover {
