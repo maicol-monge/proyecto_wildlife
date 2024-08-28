@@ -32,8 +32,8 @@ div {
   position: relative;
 
   font-size: 17px;
-  -webkit-box-shadow: 4px 8px 19px -3px  #1f4226;
-  box-shadow: 4px 8px 19px -3px  #1f4226;
+  -webkit-box-shadow: 4px 8px 19px -3px #1f4226;
+  box-shadow: 4px 8px 19px -3px #1f4226;
   transition: all 250ms;
   overflow: hidden;
 }
@@ -46,7 +46,7 @@ div {
   height: 100%;
   width: 0;
   border-radius: 15px;
-  background-color:  #1f4226;
+  background-color: #1f4226;
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
@@ -329,7 +329,6 @@ de aqui para lo de los testimonios*/
   background-color: #e9e7cd;
   padding: 5vh;
 }
-
 
 .btnSendForm {
   background-color: #6dae40;
