@@ -428,13 +428,10 @@ de aqui para lo de los testimonios*/
   color: #000; /* Color del texto */
 }
 
-<<<<<<< HEAD
 .cardd:hover{
     box-shadow: 0 4px 8px #1A4D2E, 0 6px 20px #1A4D2E;
 }
 
-=======
 .cardd:hover {
   box-shadow: 0 4px 8px #1a4d2e, 0 6px 20px #1a4d2e;
 }
->>>>>>> c58d9730b41be7286d3545a6be4c5612c0fc794e
