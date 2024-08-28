@@ -69,7 +69,7 @@ function Contacto() {
                         <img src={hojas} alt="Logo" className='hoja' />
 
                     </div>
-                    <div id='Form' className='p-5 my-5' style={{ backgroundColor: 'white' }}>
+                    <div id='Form' className='p-5 my-5' style={{ backgroundColor: 'white', borderRadius:'10px' }}>
                         <h3 className='texto-verde fw-bolder '>Para contactar a Protect Our WildLife completa este formulario</h3>
 
                         <div className='d-flex justify-content-evenly'>
@@ -96,7 +96,7 @@ function Contacto() {
                         </div>
                         <div className="my-3 w-25">
                             <label htmlFor="volunteerType" className="form-label">País:</label>
-                            <select className="form-select" id="volunteerType">
+                            <select className="form-select border-mensaje" id="volunteerType">
                                 <option value="AF">Afghanistan</option>
                                 <option value="AL">Albania</option>
                                 <option value="DZ">Algeria</option>
