@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import yellowMan from './images/hombreamarillo.jpg';
 import Navbar from './Navbar';
 import backg2 from './images/jaguar.jpg';
 import elefante from './images/-elefante.png';
 import jirafa from './images/jirafa.jpg';
-import elefante_sound from './images/ele';
-import soundFile from './images/';
+import soundFile from './images/Sonido_elefante.mp3';
 
 
 function About_us() {
@@ -34,29 +33,30 @@ function About_us() {
     };
 
     useEffect(() => {
-        const button = document.getElementById('btnSendForm');
-        const clickSound = document.getElementById('clickSound');
+        const elefante = document.getElementById('hoverElefante');
+        const hoverSound = document.getElementById('hoverSound');
 
-        if (button && clickSound) {
-            button.addEventListener('click', () => {
-                clickSound.play();
+        if (elefante && hoverSound) {
+            elefante.addEventListener('mouseenter', () => {
+                hoverSound.play();
             });
         }
 
         // Limpieza del evento cuando el componente se desmonte
         return () => {
-            if (button) {
-                button.removeEventListener('click', () => {
-                    clickSound.play();
+            if (elefante) {
+                elefante.removeEventListener('mouseenter', () => {
+                    hoverSound.play();
                 });
             }
         };
     }, []);
 
+
     return (
         <div>
             {/* NavBar */}
-            <Navbar/>
+            <Navbar />
             {/* body */}
             <section style={backgroundStyle}>
                 <div className='container text-light d-flex flex-column align-items-start ourHistory' style={{ paddingTop: '90vh' }}>
@@ -78,16 +78,19 @@ function About_us() {
             <section style={{ backgroundColor: '#1F4226' }}>
                 <div className='container d-flex misionandvision' style={{ paddingTop: '15vh', paddingBottom: '15vh' }} >
 
-                    <div className='mision'>
+                    <div className='mision d-flex align-items-center flex-column'>
                         <h1>MISIÓN</h1>
                         <p>Proteger y conservar la vida silvestre a través de acciones educativas, programas de conservación y proyectos de investigación, fomentando
                             la convivencia armoniosa entre las comunidades humanas y los ecosistemas naturales para garantizar un futuro sostenible para todas las especies.</p>
-                        <img src={elefante} alt="elefante" className='w-50 d-flex align-items-center' />
+
+                        <img id="hoverElefante" src={elefante} alt="elefante" className='w-50' />
+                        <audio id="hoverSound" src={soundFile} preload="auto"></audio>
                     </div>
 
                     <div className="divider">.</div>
 
                     <div className='vision'>
+
                         <p>Ser una organización líder a nivel mundial en la preservación de la vida silvestre, reconocida por nuestro impacto positivo en la biodiversidad y por
                             inspirar a las personas y comunidades a valorar y proteger los recursos naturales para las generaciones futuras.</p>
                         <h1>VISIÓN</h1>
@@ -137,24 +140,24 @@ function About_us() {
             </section>
 
             {/* Footer */}
-      <section className='bg-footer text-light p-3'>
-        <div className='container'>
-          <div className='row d-flex justify-content-between'>
-            <div className='col-md-2 d-flex justify-content-between fs-4'>
-              <a href='#' className='no-decoration'><i class="bi bi-youtube"></i></a>
-              <a href='#' className='no-decoration'><i class="bi bi-facebook"></i></a>
-              <a href='#' className='no-decoration'><i class="bi bi-instagram"></i></a>
-              <a href='#' className='no-decoration'><i class="bi bi-twitter-x"></i></a>
-            </div>
+            <section className='bg-footer text-light p-3'>
+                <div className='container'>
+                    <div className='row d-flex justify-content-between'>
+                        <div className='col-md-2 d-flex justify-content-between fs-4'>
+                            <a href='#' className='no-decoration'><i class="bi bi-youtube"></i></a>
+                            <a href='#' className='no-decoration'><i class="bi bi-facebook"></i></a>
+                            <a href='#' className='no-decoration'><i class="bi bi-instagram"></i></a>
+                            <a href='#' className='no-decoration'><i class="bi bi-twitter-x"></i></a>
+                        </div>
 
-            <div className='col-md-4 d-flex justify-content-end '>
-              <p className='text-end'>Privacy Policy & Cookies | By POW </p>
-            </div>
-          </div>
+                        <div className='col-md-4 d-flex justify-content-end '>
+                            <p className='text-end'>Privacy Policy & Cookies | By POW </p>
+                        </div>
+                    </div>
 
 
-        </div>
-      </section>
+                </div>
+            </section>
         </div>
     );
 }
