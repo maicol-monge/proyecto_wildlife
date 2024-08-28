@@ -334,14 +334,14 @@ de aqui para lo de los testimonios*/
 .datos_personales {
   background-color: #1a4d2e;
   padding: 5vh;
-  cursor: url('/src/components/images/garra.png'), auto;
+  
 }
 
 .personal {
   background-color: #e9e7cd;
   padding: 5vh;
   border-radius: 15px;
-  cursor: url('/src/components/images/garra.png'), auto;
+  cursor: url('https://i.ibb.co/vxGjxRV/garra-re.png'), pointer; /* Usa la imagen como cursor */
 }
 
 /* From Uiverse.io by G4b413l */
@@ -446,6 +446,7 @@ label {
   border: 0;
   color: white;
   font-weight: bold;
+  cursor: url("https://i.ibb.co/vxGjxRV/garra-re.png") , pointer;
 }
 
 .btnSendForm:hover {
@@ -555,6 +556,7 @@ label {
   }
   
   .custom-cursor {
-    cursor: url('/src/components/images/cocodrilo.jpg'), auto; /* Usa la imagen como cursor */
+    cursor: url('https://i.ibb.co/vxGjxRV/garra-re.png'), pointer; /* Usa la imagen como cursor */
+    /*cursor: url('../src/components/images/garra-re.png'), pointer;*/
   }
   

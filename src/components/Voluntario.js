@@ -19,6 +19,7 @@ function Voluntario() {
         backgroundRepeat: 'no-repeat',
         height: '200vh' // O el alto que prefieras
     };
+    
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -142,9 +143,8 @@ function Voluntario() {
                 </div>
             </section>
 
-            <section className='custom-cursor datos_personales '>
-                <div className='custom-cursor container personal d-flex flex-column'>
-                    
+            <section className='datos_personales'>
+                <div className='container personal d-flex flex-column'>
                     <h3 className='text-center'>Datos personales</h3>
 
                     <br />
@@ -466,7 +466,7 @@ function Voluntario() {
                     <br />
 
                     <div className='d-flex justify-content-center'>
-                        <button className='btnSendForm btn-apoyo w-25 custom-cursor'>Enviar Formulario</button>
+                        <button className='btnSendForm btn-apoyo w-25 '>Enviar Formulario</button>
                     </div>
 
 

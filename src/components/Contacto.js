@@ -32,7 +32,7 @@ function Contacto() {
 
             </section>
 
-            <section className='fondo-donar py-5' >
+            <section className='fondo-donar py-5 custom-cursor' >
                 <div className='container'>
                     <img src={gacela} className="bird bird3 w-25" alt="" />
                     <div className='py-5'>
@@ -69,7 +69,7 @@ function Contacto() {
                         <img src={hojas} alt="Logo" className='hoja' />
 
                     </div>
-                    <div id='Form' className='p-5 my-5' style={{ backgroundColor: 'white', borderRadius:'10px' }}>
+                    <div id='Form' className='p-5 my-5 ' style={{ backgroundColor: 'white', borderRadius:'10px' }}>
                         <h3 className='texto-verde fw-bolder '>Para contactar a Protect Our WildLife completa este formulario</h3>
 
                         <div className='d-flex justify-content-evenly'>
