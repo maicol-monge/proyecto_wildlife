@@ -41,7 +41,7 @@ function Preguntas() {
             </section>
 
             <section className=''>
-                <div className='container'>
+                <div className='container custom-cursor'>
                     <div>
                         <div className='fondoTituloAcordion text-light text-start'>
                             <h1 className='p-3'>General</h1>
