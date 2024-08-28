@@ -560,3 +560,40 @@ label {
     /*cursor: url('../src/components/images/garra-re.png'), pointer;*/
   }
   
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .card {
+    opacity: 0;
+  }
+  
+  .card.slide-left.in-view {
+    animation: slideInLeft 1s forwards;
+    opacity: 1;
+  }
+  
+  .card.slide-right.in-view {
+    animation: slideInRight 1s forwards;
+    opacity: 1;
+  }
+  
+  
