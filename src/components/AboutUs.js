@@ -103,7 +103,7 @@ function About_us() {
                         <p>Proteger y conservar la vida silvestre a través de acciones educativas, programas de conservación y proyectos de investigación, fomentando
                             la convivencia armoniosa entre las comunidades humanas y los ecosistemas naturales para garantizar un futuro sostenible para todas las especies.</p>
                         <div className='custom-cursor d-flex align-items-center flex-column'>
-                            <img id="hoverElefante" src={elefante} alt="elefante" className='w-75' />
+                            <img id="hoverElefante" src={elefante} alt="elefante" className='w-50' />
                             <audio id="hoverSound" src={soundFile} preload="auto"></audio>
                         </div>
 
@@ -113,7 +113,7 @@ function About_us() {
 
                     <div className='vision'>
                         <div className='custom-cursor d-flex align-items-center flex-column'>
-                            <img id="hoverElefante2" src={elefante} alt="elefante" className='w-75' />
+                            <img id="hoverElefante2" src={elefante} alt="elefante" className='w-50' />
                             <audio id="hoverSound2" src={soundFile} preload="auto"></audio>
                         </div>
                         <p>Ser una organización líder a nivel mundial en la preservación de la vida silvestre, reconocida por nuestro impacto positivo en la biodiversidad y por
