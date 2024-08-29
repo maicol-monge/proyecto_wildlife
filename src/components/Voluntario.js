@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import quokka from './images/quokka.jpeg';
-import AnaMartinez from './images/Ana.jpg';
-import JuanPerez from './images/chico camara.jpg';
-import MariaLopez from './images/chica lago.jpg';
+import quokka from './images/quokka.webp';
+import AnaMartinez from './images/Ana.webp';
+import JuanPerez from './images/chico-camara.webp';
+import MariaLopez from './images/chica-lago.webp';
 import quoteLeft from './images/comilla-left.png';
 import quoteRight from './images/comilla-right.png';
 import soundFile from './images/tigerr.mp3';

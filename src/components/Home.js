@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import Elefantes from './images/ManaElefantes.jpg';
-import leon from './images/leon-lookup.jpg';
-import puma from './images/puma.jpg';
-import primate from './images/primates.jpg';
-import elente_solo from './images/elefante-solo.jpg';
-import wallaby from './images/Wallabies.jpg';
-import tortuga from './images/TortugaMarina.jpg';
-import cocodrilo from './images/cocodrilo.jpg';
-import AnaMartinez from './images/Ana.jpg';
-import JuanPerez from './images/chico camara.jpg';
-import MariaLopez from './images/chica lago.jpg';
+import Elefantes from './images/ManaElefantes.webp';
+import leon from './images/leon-lookup.webp';
+import puma from './images/puma.webp';
+import primate from './images/primates.webp';
+import elente_solo from './images/elefante-solo.webp';
+import wallaby from './images/Wallabies.webp';
+import tortuga from './images/TortugaMarina.webp';
+import cocodrilo from './images/cocodrilo.webp';
+import AnaMartinez from './images/Ana.webp';
+import JuanPerez from './images/chico-camara.webp';
+import MariaLopez from './images/chica-lago.webp';
 import quoteLeft from './images/comilla-left.png';
 import quoteRight from './images/comilla-right.png';
 

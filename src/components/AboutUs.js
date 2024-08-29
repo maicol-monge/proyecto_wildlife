@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import yellowMan from './images/hombreamarillo.jpg';
+import yellowMan from './images/hombreamarillo.webp';
 import Navbar from './Navbar';
-import backg2 from './images/jaguar.jpg';
+import backg2 from './images/jaguar.webp';
 import elefante from './images/-elefante.png';
-import jirafa from './images/jirafa.jpg';
+import jirafa from './images/jirafa.webp';
 import soundFile from './images/Sonido_elefante.mp3';
 
 
