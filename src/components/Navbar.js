@@ -65,7 +65,7 @@ function Navbar() {
                                         <Link className="nav-link active" aria-current="page" to="/donar">Donar</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link active" aria-current="page" to="/contacto">Contactanos</Link>
+                                        <Link className="nav-link active" aria-current="page" to="/contacto">Contáctanos</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link active" aria-current="page" to="/preguntas">Preguntas Frecuentes</Link>

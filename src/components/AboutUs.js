@@ -37,7 +37,7 @@ function About_us() {
         const hoverSound = document.getElementById('hoverSound');
 
         if (elefante && hoverSound) {
-            elefante.addEventListener('mouseenter', () => {
+            elefante.addEventListener('click', () => {
                 hoverSound.play();
             });
         }
@@ -45,7 +45,7 @@ function About_us() {
         // Limpieza del evento cuando el componente se desmonte
         return () => {
             if (elefante) {
-                elefante.removeEventListener('mouseenter', () => {
+                elefante.removeEventListener('click', () => {
                     hoverSound.play();
                 });
             }
@@ -89,8 +89,9 @@ function About_us() {
 
                     <div className="divider">.</div>
 
-                    <div className='vision'>
-
+                    <div className='vision d-flex align-items-center flex-column'>
+                        <img id="hoverElefante" src={elefante} alt="elefante" className='w-50 tooltiptext' />
+                        <audio id="hoverSound" src={soundFile} preload="auto"></audio>
                         <p>Ser una organización líder a nivel mundial en la preservación de la vida silvestre, reconocida por nuestro impacto positivo en la biodiversidad y por
                             inspirar a las personas y comunidades a valorar y proteger los recursos naturales para las generaciones futuras.</p>
                         <h1>VISIÓN</h1>
