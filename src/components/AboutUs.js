@@ -98,11 +98,11 @@ function About_us() {
             <section style={{ backgroundColor: '#1F4226' }}>
                 <div className='container d-flex misionandvision' style={{ paddingTop: '15vh', paddingBottom: '15vh' }} >
 
-                    <div className='mision d-flex align-items-center flex-column'>
+                    <div className='mision'>
                         <h1>MISIÓN</h1>
                         <p>Proteger y conservar la vida silvestre a través de acciones educativas, programas de conservación y proyectos de investigación, fomentando
                             la convivencia armoniosa entre las comunidades humanas y los ecosistemas naturales para garantizar un futuro sostenible para todas las especies.</p>
-                        <div className='custom-cursor'>
+                        <div className='custom-cursor d-flex align-items-center flex-column'>
                             <img id="hoverElefante" src={elefante} alt="elefante" className='w-75' />
                             <audio id="hoverSound" src={soundFile} preload="auto"></audio>
                         </div>
@@ -111,8 +111,8 @@ function About_us() {
 
                     <div className="divider">.</div>
 
-                    <div className='vision d-flex align-items-center flex-column'>
-                        <div className='custom-cursor'>
+                    <div className='vision'>
+                        <div className='custom-cursor d-flex align-items-center flex-column'>
                             <img id="hoverElefante2" src={elefante} alt="elefante" className='w-75' />
                             <audio id="hoverSound2" src={soundFile} preload="auto"></audio>
                         </div>
