@@ -20,27 +20,22 @@ function Voluntario() {
     };
 
     useEffect(() => {
-        const elefante = document.getElementById('hoverElefante');
-        const hoverSound = document.getElementById('hoverSound');
-    
-        const playSoundOnHover = () => {
-            hoverSound.play();
-        };
-    
-        const enableSound = () => {
-            if (elefante && hoverSound) {
-                elefante.addEventListener('mouseenter', playSoundOnHover);
-            }
-            document.removeEventListener('click', enableSound);
-        };
-    
-        document.addEventListener('click', enableSound);
-    
+        const button = document.getElementById('btnSendForm');
+        const clickSound = document.getElementById('clickSound');
+
+        if (button && clickSound) {
+            button.addEventListener('click', () => {
+                clickSound.play();
+            });
+        }
+
+        // Limpieza del evento cuando el componente se desmonte
         return () => {
-            if (elefante) {
-                elefante.removeEventListener('mouseenter', playSoundOnHover);
+            if (button) {
+                button.removeEventListener('click', () => {
+                    clickSound.play();
+                });
             }
-            document.removeEventListener('click', enableSound);
         };
     }, []);
 
