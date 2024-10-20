@@ -187,7 +187,7 @@ function Home() {
                     <h3><i class="bi bi-geo-alt-fill"></i><a className='no-decoration' href='https://maps.app.goo.gl/qWNhnwTvrhDWYgtt6' target="_blank">  Barra de Santiago, Ahuachapán, El Salvador</a></h3>
                   </div>
                   <div className='d-flex justify-content-center'>
-                    <Link to="/about-me" className="btn btn-light m-2 fw-bold texto-verde fs-5" style={{ width: '20vh' }}>
+                    <Link className="btn btn-light m-2 fw-bold texto-verde fs-5" style={{ width: '20vh' }}>
                       Asistir
                     </Link>
                   </div>
@@ -214,7 +214,7 @@ function Home() {
                     <h3><i class="bi bi-geo-alt-fill"></i><a className='no-decoration' href='https://maps.app.goo.gl/CF9XnemjMRLttdjs8' target="_blank">  Cairns, Queensland, Australia</a></h3>
                   </div>
                   <div className='d-flex justify-content-center'>
-                    <Link to="/about-me" className="btn btn-light m-2 fw-bold texto-verde fs-5" style={{ width: '20vh' }}>
+                    <Link  className="btn btn-light m-2 fw-bold texto-verde fs-5" style={{ width: '20vh' }}>
                       Asistir
                     </Link>
                   </div>
