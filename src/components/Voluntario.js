@@ -75,8 +75,8 @@ function Voluntario() {
     const [apellido, setApellido] = useState('');
     const [edad, setEdad] = useState('');
     const [correo, setCorreo] = useState('');
-    const [tipoVoluntario, setTipoVoluntario] = useState('');
-    const [pais, setPais] = useState('');
+    const [tipoVoluntario, setTipoVoluntario] = useState('rescate');
+    const [pais, setPais] = useState('AF');
     const [direccion, setDireccion] = useState('');
 
     const handleSubmit = (e) => {
@@ -84,7 +84,7 @@ function Voluntario() {
 
         const voluntario = { nombre, apellido, edad, correo, tipoVoluntario, pais, direccion };
 
-        fetch('http://localhost:3306/register', {
+        fetch('http://localhost:3002/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -264,7 +264,10 @@ function Voluntario() {
                                         style={{ backgroundColor: "transparent" }}
                                         id="volunteerType"
                                         value={tipoVoluntario}
-                                        onChange={(e) => setTipoVoluntario(e.target.value)}
+                                        onChange={(e) => {
+                                            
+                                            setTipoVoluntario(e.target.value);
+                                        }}
                                         required
                                     >
                                         <option value="rescate">Voluntario de Rescate y Rehabilitación</option>
