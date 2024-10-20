@@ -93,40 +93,46 @@ function Navbar() {
         <section className="sticky-top">
             <nav className="navbar navbar-expand-lg bg-navbar">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">
-                        <img src='https://i.ibb.co/dfj85Vs/LOGO-PNG-1.png' alt="Logo" style={{ height: '65px' }} />
-                    </Link>
-                    <Link to="/voluntario" className="btn text-light m-2 fs-5 bg-btn-navbar" style={{ width: '20vh' }}>
-                        <i className="bi bi-person-plus-fill"></i> Únete
-                    </Link>
-                    <Link to="/donar" className="btn text-light m-2 fs-5 bg-btn-navbar" style={{ width: '20vh' }}>
-                        <i className="bi bi-patch-plus-fill"></i> Donar
-                    </Link>
+                    <div className='d-flex justify-content-start align-items-center'>
+                        <div>
+                            <Link className="navbar-brand" to="/">
+                                <img src='https://i.ibb.co/dfj85Vs/LOGO-PNG-1.png' alt="Logo" style={{ height: '65px' }} />
+                            </Link>
+                            <Link to="/voluntario" className="btn text-light m-2 fs-5 bg-btn-navbar" style={{ width: '20vh' }}>
+                                <i className="bi bi-person-plus-fill"></i> Únete
+                            </Link>
+                            <Link to="/donar" className="btn text-light m-2 fs-5 bg-btn-navbar" style={{ width: '20vh' }}>
+                                <i className="bi bi-patch-plus-fill"></i> Donar
+                            </Link>
+                        </div>
+                    </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse " id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-                            <li className="nav-item">
-                                <Link className="nav-link text-light" aria-current="page" to="/about_us">Sobre Nosotros</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link text-light" to="/voluntario">Voluntariado</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link text-light" to="/donar">Donar</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link text-light" to="/contacto">Contáctanos</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link text-light" to="/preguntas">Preguntas Frecuentes</Link>
-                            </li>
-                        </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                            <button className="btn btn-outline-success text-light" type="submit">Buscar</button>
-                        </form>
+                    <div className='d-flex justify-content-end align-items-center'>
+                        <div className="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                <li className="nav-item">
+                                    <Link className="nav-link text-light" aria-current="page" to="/about_us">Sobre Nosotros</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link text-light" to="/voluntario">Voluntariado</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link text-light" to="/donar">Donar</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link text-light" to="/contacto">Contáctanos</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link text-light" to="/preguntas">Preguntas Frecuentes</Link>
+                                </li>
+                            </ul>
+                            <form className="d-flex" role="search">
+                                <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                                <button className="btn btn-outline-success text-light" type="submit">Buscar</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </nav>
