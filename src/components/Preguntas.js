@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import bird1 from './images/bird1.png';
-import bird2 from './images/bird2.png';
-import bird3 from './images/bird3.png';
+
 
 
 function Preguntas() {

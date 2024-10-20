@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import bird1 from './images/bird1.png';
-import bird2 from './images/bird2.png';
-import bird3 from './images/bird3.png';
 import soundFile from './images/tigerr.mp3';
 
 function Donar() {
@@ -49,13 +46,13 @@ function Donar() {
                     </div>
                 </div>
                 <div className="bird-container">
-                    <img src={bird1} className="bird bird1 w-25" alt="Bird 1" />
-                    <img src={bird2} className="bird bird2 w-25" alt="Bird 2" />
+                    <img src='https://i.ibb.co/TwZQSPT/bird1.png' className="bird bird1 w-25" alt="Bird 1" />
+                    <img src='https://i.ibb.co/Ss9mrfj/bird2.png' className="bird bird2 w-25" alt="Bird 2" />
                 </div>
             </section>
 
             <section id='Donar' className='fondo-donar pt-5 '>
-                <img src={bird3} className="bird bird3 w-25" alt="Bird 2" />
+                <img src='https://i.ibb.co/Wyn7b1v/bird3.png' className="bird bird3 w-25" alt="Bird 2" />
                 <div className='bg-light p-5 texto-verde text-center w-75 custom-cursor' style={{ border: '5px solid #1F4226' }}>
                     <h1 className='fw-bold py-4'>Apoya a Protect Our WildLife</h1>
                     <div>

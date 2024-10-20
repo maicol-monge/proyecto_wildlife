@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from './images/LOGO PNG 1.png';
+
 
 function Navbar() {
 
@@ -14,7 +14,7 @@ function Navbar() {
                         <div className="d-flex w-100 align-items-center justify-content-between">
                             {/* Logo */}
                             <Link className="navbar-brand" to="/">
-                                <img src={Logo} alt="Logo" style={{ height: '65px' }} />
+                                <img src='https://i.ibb.co/dfj85Vs/LOGO-PNG-1.png' alt="Logo" style={{ height: '65px' }} />
                             </Link>
 
                             {/* Elementos */}

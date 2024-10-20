@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import guardarecursos from './images/GuardaRecursos.webp';
-import hojas from './images/hojas.png';
-import gacela from './images/gacela.png';
 import soundFile from './images/tigerr.mp3';
 
 
 function Contacto() {
 
     const backg_quokka = {
-        backgroundImage: `url(${guardarecursos})`,
+        backgroundImage: `url(https://i.ibb.co/fC9bzYD/Guarda-Recursos.webp)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -54,7 +51,7 @@ function Contacto() {
 
             <section className='fondo-donar py-5 ' >
                 <div className='container'>
-                    <img src={gacela} className="bird bird3 w-25" alt="" />
+                    <img src='https://i.ibb.co/K77TfKQ/gacela.png' className="bird bird3 w-25" alt="" />
                     <div className='py-5'>
                         <h1 className='texto-verde fw-bolder'>¿Tienes preguntas sobre POW?</h1>
                         <p className='texto-verde fs-3'>
@@ -69,24 +66,25 @@ function Contacto() {
                     </div>
                     <div className='d-flex hojas mt-2'>
 
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
-                        <img src={hojas} alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        <img src='https://i.ibb.co/g4JMJwm/hojas.png' alt="Logo" className='hoja' />
+                        
 
                     </div>
                     <div id='Form' className='p-5 my-5 custom-cursor ' style={{ backgroundColor: 'white', borderRadius:'10px' }}>

@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react';
-import yellowMan from './images/hombreamarillo.webp';
 import Navbar from './Navbar';
-import backg2 from './images/jaguar.webp';
-import elefante from './images/-elefante.png';
-import jirafa from './images/jirafa.webp';
 import soundFile from './images/Sonido_elefante.mp3';
 
 
 function About_us() {
     const backgroundStyle = {
-        backgroundImage: `url(${yellowMan})`,
+        backgroundImage: `url(https://i.ibb.co/tLw7PL4/hombreamarillo.webp)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -17,14 +13,14 @@ function About_us() {
     };
 
     const backgroundDiv2 = {
-        backgroundImage: `url(${backg2})`,
+        backgroundImage: `url(https://i.ibb.co/h7bbtmX/jaguar.webp)`,
         backgroundSize: 'cover',
         //backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         height: '200vh' // O el alto que prefieras
     };
     const backg_jirafa = {
-        backgroundImage: `url(${jirafa})`,
+        backgroundImage: `url(https://i.ibb.co/zxpkSY5/jirafa.webp)`,
         backgroundSize: 'cover',
         //backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -102,7 +98,7 @@ function About_us() {
                         <p>Proteger y conservar la vida silvestre a través de acciones educativas, programas de conservación y proyectos de investigación, fomentando
                             la convivencia armoniosa entre las comunidades humanas y los ecosistemas naturales para garantizar un futuro sostenible para todas las especies.</p>
                         <div className='custom-cursor d-flex align-items-center flex-column'>
-                            <img id="hoverElefante" src={elefante} alt="elefante" className='w-50' />
+                            <img id="hoverElefante" src='https://i.ibb.co/6sP9LXt/elefante.png' alt="elefante" className='w-50' />
                             <audio id="hoverSound" src={soundFile} preload="auto"></audio>
                         </div>
 
@@ -112,7 +108,7 @@ function About_us() {
 
                     <div className='vision'>
                         <div className='custom-cursor d-flex align-items-center flex-column'>
-                            <img id="hoverElefante2" src={elefante} alt="elefante" className='w-50' />
+                            <img id="hoverElefante2" src='https://i.ibb.co/6sP9LXt/elefante.png' alt="elefante" className='w-50' />
                             <audio id="hoverSound2" src={soundFile} preload="auto"></audio>
                         </div>
                         <p>Ser una organización líder a nivel mundial en la preservación de la vida silvestre, reconocida por nuestro impacto positivo en la biodiversidad y por
