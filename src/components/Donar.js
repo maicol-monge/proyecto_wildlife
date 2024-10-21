@@ -147,14 +147,14 @@ function Donar() {
                                 />
                             </div>
 
-                            
 
-                            <div className='d-flex justify-content-center' style={{ paddingTop: '5vh', paddingBottom: '5vh' }}>
-                            <button type="submit" className="btn btn-light m-2 text-light fw-bold btn-donar" style={{ width: '20vh' }}>
-                                ¡Donar!
-                            </button>
-                            <audio id="clickSound" src={soundFile} preload="auto"></audio>
-                        </div>
+
+                            <div className='d-flex justify-content-center'>
+                                <button type="submit" className="btn btn-light m-2 text-light fw-bold btn-donar" id='btnSendForm' style={{ width: '20vh' }}>
+                                    ¡Donar!
+                                </button>
+                                <audio id="clickSound" src={soundFile} preload="auto"></audio>
+                            </div>
                         </form>
                     </div>
                 </div>
