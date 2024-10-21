@@ -4,7 +4,40 @@ import Navbar from './Navbar';
 import soundFile from './images/tigerr.mp3';
 
 function Donar() {
-    
+    const [correo, setCorreo] = useState('');
+    const [monto, setMonto] = useState('');
+    const [numeroTarjeta, setNumeroTarjeta] = useState('');
+    const [fechaExpiracion, setFechaExpiracion] = useState('');
+    const [cvv, setCvv] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const donacion = { correo, monto: parseFloat(monto), numero_tarjeta: numeroTarjeta, fecha_expiracion: fechaExpiracion, cvv };
+
+
+
+        fetch('http://localhost:3009/donar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(donacion),
+        })
+            .then((response) => response.text())
+            .then((data) => {
+                alert(data);
+                // Limpiar los campos
+                setCorreo('');
+                setMonto('');
+                setNumeroTarjeta('');
+                setFechaExpiracion('');
+                setCvv('');
+            })
+            .catch((error) => {
+                console.error('Error al procesar la donación:', error);
+            });
+    };
 
     const scrollToDonar = () => {
         document.getElementById('Donar').scrollIntoView({ behavior: 'smooth' });
@@ -32,7 +65,7 @@ function Donar() {
     return (
         <div>
             {/* NavBar */}
-            <Navbar/>
+            <Navbar />
             {/* body */}
             <section className='fondo-donar'>
                 <div className='text-center texto-verde ' style={{ padding: '15vh' }}>
@@ -56,58 +89,73 @@ function Donar() {
                 <div className='bg-light p-5 texto-verde text-center w-75 custom-cursor' style={{ border: '5px solid #1F4226' }}>
                     <h1 className='fw-bold py-4'>Apoya a Protect Our WildLife</h1>
                     <div>
-                        <div className="input-group my-3 w-75">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Correo Electrónico"
-                                aria-label="Recipient's username"
-                                aria-describedby="button-addon2"
-                            />
-                        </div>
-                        <div className="input-group my-3 w-25">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Monto"
-                                aria-label="Recipient's username"
-                                aria-describedby="button-addon2"
-                            />
-                        </div>
-                        <h4 className='fw-bold text-start pt-3'>Datos de Tarjeta    <i class="bi bi-credit-card"></i></h4>
-                        <div className="input-group my-3 w-75">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Número de Tarjeta"
-                                aria-label="Recipient's username"
-                                aria-describedby="button-addon2"
-                            />
-                        </div>
-                        <div className="input-group my-3 w-25">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="MM/AA"
-                                aria-label="Recipient's username"
-                                aria-describedby="button-addon2"
-                            />
-                        </div>
-                        <div className="input-group my-3 w-25">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="CVV"
-                                aria-label="Recipient's username"
-                                aria-describedby="button-addon2"
-                            />
-                        </div>
-                        <div className='d-flex justify-content-center' style={{ paddingTop: '5vh', paddingBottom: '5vh' }}>
-                            <Link to="" className="btn btn-light m-2 text-light fw-bold btn-donar" id='btnSendForm' style={{ width: '20vh' }}>
+                        <form onSubmit={handleSubmit}>
+                            <div className="input-group my-3 w-75">
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    placeholder="Correo Electrónico"
+                                    value={correo}
+                                    onChange={(e) => setCorreo(e.target.value)}
+                                    required
+                                />
+                            </div>
+
+                            <div className="input-group my-3 w-25">
+                                <input
+                                    type="number"
+                                    className="form-control"
+                                    placeholder="Monto"
+                                    value={monto}
+                                    onChange={(e) => setMonto(e.target.value)}
+                                    required
+                                />
+                            </div>
+
+                            <h4 className='fw-bold text-start pt-3'>Datos de Tarjeta <i className="bi bi-credit-card"></i></h4>
+
+                            <div className="input-group my-3 w-50">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Número de Tarjeta"
+                                    value={numeroTarjeta}
+                                    onChange={(e) => setNumeroTarjeta(e.target.value)}
+                                    required
+                                />
+                            </div>
+
+                            <div className="input-group my-3 w-25">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="MM/AA"
+                                    value={fechaExpiracion}
+                                    onChange={(e) => setFechaExpiracion(e.target.value)}
+                                    required
+                                />
+                            </div>
+
+                            <div className="input-group my-3 w-25">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="CVV"
+                                    value={cvv}
+                                    onChange={(e) => setCvv(e.target.value)}
+                                    required
+                                />
+                            </div>
+
+                            
+
+                            <div className='d-flex justify-content-center' style={{ paddingTop: '5vh', paddingBottom: '5vh' }}>
+                            <button type="submit" className="btn btn-light m-2 text-light fw-bold btn-donar" style={{ width: '20vh' }}>
                                 ¡Donar!
-                            </Link>
+                            </button>
                             <audio id="clickSound" src={soundFile} preload="auto"></audio>
                         </div>
+                        </form>
                     </div>
                 </div>
 

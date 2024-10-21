@@ -52,6 +52,25 @@ app.post('/contact', (req, res) => {
         res.status(201).json({ message: 'Mensaje enviado con éxito.', id: results.insertId });
     });
 });
+
+// Ruta para procesar donaciones
+app.post('/donar', (req, res) => {
+    const { correo, monto, numero_tarjeta, fecha_expiracion, cvv } = req.body;
+    
+    // Asegúrate de que el monto está formateado correctamente
+    const montoDecimal = parseFloat(monto).toFixed(2);
+
+    const sql = 'INSERT INTO donaciones (correo, monto, numero_tarjeta, fecha_expiracion, cvv) VALUES (?, ?, ?, ?, ?)';
+
+    db.query(sql, [correo, montoDecimal, numero_tarjeta, fecha_expiracion, cvv], (err, result) => {
+        if (err) {
+            console.error('Error al insertar donación:', err);
+            return res.status(500).send('Error en el servidor');
+        }
+        res.send('Donación realizada con éxito');
+    });
+});
+
 // Iniciar servidor
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
