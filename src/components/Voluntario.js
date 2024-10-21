@@ -84,7 +84,7 @@ function Voluntario() {
 
         const voluntario = { nombre, apellido, edad, correo, tipoVoluntario, pais, direccion };
 
-        fetch('http://localhost:3002/register', {
+        fetch('http://localhost:3006/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

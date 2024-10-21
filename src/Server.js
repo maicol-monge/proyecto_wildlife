@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3002; // Cambia si es necesario
+const port = 3006; // Cambia si es necesario
 
 // Middleware
 app.use(cors());
@@ -34,6 +34,24 @@ app.post('/register', (req, res) => {
     });
 });
 
+app.post('/contact', (req, res) => {
+    const { nombre, correo, pais, mensaje } = req.body;
+
+    // Valida los datos recibidos
+    if (!nombre || !correo || !pais || !mensaje) {
+        return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
+    }
+
+    // Inserta los datos en la base de datos
+    const query = 'INSERT INTO contacto (nombre, correo, pais, mensaje) VALUES (?, ?, ?, ?)';
+    db.query(query, [nombre, correo, pais, mensaje], (err, results) => {
+        if (err) {
+            console.error('Error al insertar datos:', err);
+            return res.status(500).json({ error: 'Error al guardar los datos.' });
+        }
+        res.status(201).json({ message: 'Mensaje enviado con éxito.', id: results.insertId });
+    });
+});
 // Iniciar servidor
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
