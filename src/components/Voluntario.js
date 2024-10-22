@@ -5,6 +5,27 @@ import { Link } from 'react-router-dom';
 
 function Voluntario() {
 
+
+    const [testimonios, setTestimonios] = useState([]);
+
+    useEffect(() => {
+        const fetchTestimonios = async () => {
+            try {
+                const response = await fetch('http://localhost:3006/testimonios/ultimos');
+                const data = await response.json();
+                console.log(data); // Verificar que los datos están siendo recibidos correctamente
+                setTestimonios(data);
+            } catch (error) {
+                console.error('Error al cargar los testimonios:', error);
+            }
+        };
+
+        fetchTestimonios();
+        console.log('Component mounted');
+    }, []);
+
+
+
     const backg_quokka = {
         backgroundImage: `url(https://i.ibb.co/LY4PNPB/quokka.webp)`,
         backgroundSize: 'cover',
@@ -581,71 +602,49 @@ function Voluntario() {
             {/* Testimonios */}
             <section className='bg-light'>
                 <div className='container texto-verde' style={{ padding: '10vh' }}>
-
                     <div id="testimoniosCarousel" className="carousel slide mt-5" data-bs-ride="carousel">
                         <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <div className="d-flex flex-column align-items-center">
-                                    <img src='https://i.ibb.co/kQY2bZs/Ana.webp' className="rounded-circle mb-3" alt="Ana Martínez" style={{ width: '150px', height: '150px' }} />
-                                    <div className='d-flex justify-content-start w-75'>
-                                        <img src='https://i.ibb.co/nDjSf4p/comilla-left.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
+                            {testimonios.length > 0 ? (
+                                testimonios.map((testimonio, index) => (
+                                    <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                                        <div className="d-flex flex-column align-items-center">
+                                            <img src={`https://i.ibb.co/kQY2bZs/Ana.webp`} className="rounded-circle mb-3" alt={testimonio.nombre} style={{ width: '150px', height: '150px' }} />
+                                            <div className='d-flex justify-content-start w-75'>
+                                                <img src='https://i.ibb.co/nDjSf4p/comilla-left.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
+                                            </div>
+                                            <p className="text-center" style={{ maxWidth: '600px' }}>
+                                                {`"${testimonio.mensaje}"`}
+                                            </p>
+                                            <div className='d-flex justify-content-end w-75'>
+                                                <img src='https://i.ibb.co/2hGqXVD/comilla-right.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
+                                            </div>
+                                            <h5 className="fw-bold">{testimonio.nombre}</h5>
+                                            <p>{testimonio.tipoVoluntario}</p>
+                                        </div>
                                     </div>
-                                    <p className="text-center" style={{ maxWidth: '600px' }}>
-                                        "Unirme a Protect Our Wildlife ha sido increíblemente gratificante. Ver el impacto positivo de nuestras campañas y educar a las comunidades sobre la conservación de la vida silvestre me llena de orgullo. POW no solo protege a los animales, sino que también empodera a las personas para cuidar su entorno. Estoy orgullosa de ser parte de esta misión."
-                                    </p>
-                                    <div className='d-flex justify-content-end w-75'>
-                                        <img src='https://i.ibb.co/2hGqXVD/comilla-right.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
-                                    </div>
-
-                                    <h5 className="fw-bold">Ana Martínez</h5>
-                                    <p>Voluntaria de POW</p>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <div className="d-flex flex-column align-items-center">
-                                    <img src='https://i.ibb.co/tHLCjXW/chico-camara.webp' className="rounded-circle mb-3" alt="Juan Pérez" style={{ width: '150px', height: '150px' }} />
-                                    <div className='d-flex justify-content-start w-75'>
-                                        <img src='https://i.ibb.co/nDjSf4p/comilla-left.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
-                                    </div>
-                                    <p className="text-center" style={{ maxWidth: '600px' }}>
-                                        "Trabajar con POW me ha permitido hacer una diferencia real en la protección de la vida silvestre. La organización tiene un enfoque práctico y efectivo para abordar los desafíos de conservación."
-                                    </p>
-                                    <div className='d-flex justify-content-end w-75'>
-                                        <img src='https://i.ibb.co/2hGqXVD/comilla-right.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
-                                    </div>
-                                    <h5 className="fw-bold">Juan Pérez</h5>
-                                    <p>Voluntario de POW</p>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <div className="d-flex flex-column align-items-center">
-                                    <img src='https://i.ibb.co/KyD9N5c/chica-lago.webp' className="rounded-circle mb-3" alt="María López" style={{ width: '150px', height: '150px' }} />
-                                    <div className='d-flex justify-content-start w-75'>
-                                        <img src='https://i.ibb.co/nDjSf4p/comilla-left.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
-                                    </div>
-                                    <p className="text-center" style={{ maxWidth: '600px' }}>
-                                        "POW es una organización que realmente se preocupa por la conservación de la vida silvestre. Me siento honrada de ser parte de este increíble equipo y contribuir a una causa tan noble."
-                                    </p>
-                                    <div className='d-flex justify-content-end w-75'>
-                                        <img src='https://i.ibb.co/2hGqXVD/comilla-right.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
-                                    </div>
-                                    <h5 className="fw-bold">María López</h5>
-                                    <p>Voluntaria de POW</p>
-                                </div>
-                            </div>
+                                ))
+                            ) : (
+                                <p>Cargando testimonios...</p>
+                            )}
                         </div>
-
                         <div style={{ padding: '5vh' }}>
                             <div className="carousel-indicators">
-                                <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                {testimonios.map((_, index) => (
+                                    <button
+                                        type="button"
+                                        data-bs-target="#testimoniosCarousel"
+                                        data-bs-slide-to={index}
+                                        className={index === 0 ? 'active' : ''}
+                                        aria-current={index === 0 ? 'true' : ''}
+                                        aria-label={`Slide ${index + 1}`}
+                                        key={index}
+                                    ></button>
+                                ))}
                             </div>
-
                         </div>
                     </div>
                     <div className='d-flex justify-content-center mt-4'>
-                        <Link to="/testimonio" className="btn btn-apoyo text-light fs-5 " style={{ width: '' }}>
+                        <Link to="/testimonio" className="btn btn-apoyo text-light fs-5" style={{ width: '' }}>
                             Agregar Testimonio
                         </Link>
                     </div>

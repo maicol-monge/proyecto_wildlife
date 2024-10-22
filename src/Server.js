@@ -89,6 +89,21 @@ app.post('/testimonios', (req, res) => {
     });
 });
 
+// Ruta para obtener los últimos 3 testimonios
+app.get('/testimonios/ultimos', (req, res) => {
+    const sql = 'SELECT nombre, tipoVoluntario, mensaje FROM testimonios ORDER BY fecha DESC LIMIT 3';
+    
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error('Error al obtener los testimonios:', err);
+            return res.status(500).json({ message: 'Error al obtener los testimonios.' });
+        }
+        console.log('Testimonios obtenidos:', results); // Log para ver los resultados
+        res.status(200).json(results);
+    });
+});
+
+
 
 // Iniciar servidor
 app.listen(port, () => {
