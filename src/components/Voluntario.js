@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import soundFile from './images/tigerr.mp3';
+import { Link } from 'react-router-dom';
 
 function Voluntario() {
 
@@ -265,7 +266,7 @@ function Voluntario() {
                                         id="volunteerType"
                                         value={tipoVoluntario}
                                         onChange={(e) => {
-                                            
+
                                             setTipoVoluntario(e.target.value);
                                         }}
                                         required
@@ -640,8 +641,13 @@ function Voluntario() {
                                 <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                 <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                             </div>
-                        </div>
 
+                        </div>
+                    </div>
+                    <div className='d-flex justify-content-center mt-4'>
+                        <Link to="/testimonio" className="btn btn-apoyo text-light fs-5 " style={{ width: '' }}>
+                            Agregar Testimonio
+                        </Link>
                     </div>
                 </div>
             </section>

@@ -6,6 +6,7 @@ import Donar from './components/Donar';
 import Voluntario from './components/Voluntario';
 import Preguntas from './components/Preguntas';
 import Contacto from './components/Contacto';
+import Testimonio from './components/Testimonio';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/voluntario" element={<Voluntario />} />
           <Route path="/preguntas" element={<Preguntas />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/testimonio" element={<Testimonio />} />
         </Routes>
       </div>
     </Router>
