@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import soundFile from './images/tigerr.mp3';
+import Voluntario from './Voluntario';
 
 function Contacto() {
     const [formData, setFormData] = useState({
         nombre: '',
         correo: '',
-        pais: 'LS', // Valor por defecto
+        tipoVoluntario: 'Voluntario de Rescate y Rehabilitación', // Valor por defecto
         mensaje: ''
     });
 
@@ -54,7 +55,7 @@ function Contacto() {
         e.preventDefault(); // Evita que la página se recargue
 
         // Validación simple
-        if (!formData.nombre || !formData.correo || !formData.mensaje) {
+        if (!formData.nombre || !formData.correo || !formData.mensaje || !formData.tipoVoluntario) {
             alert('Por favor completa todos los campos.');
             return;
         }
@@ -74,7 +75,7 @@ function Contacto() {
                 setFormData({
                     nombre: '',
                     correo: '',
-                    pais: 'LS',
+                    tipoVoluntario: 'Voluntario de Rescate y Rehabilitación',
                     mensaje: ''
                 });
             } else {
@@ -124,16 +125,29 @@ function Contacto() {
                                         aria-describedby="basic-addon2" />
                                 </div>
 
+
                                 <div className="input-group  w-75 mt-5">
-                                    <input
-                                        type="email"
-                                        className="form-control border-mensaje"
-                                        placeholder="Tipo de Usuario"
-                                        name="tipoUsuario"
-                                        value={formData.correo}
+                                    <label htmlFor="volunteerType" className="form-label " >Tipo de Voluntario:</label>
+                                    <select
+                                        className="form-select border-mensaje"
+                                        id="volunteerType"
+                                        name="tipoVoluntario"
+                                        value={formData.tipoVoluntario}
                                         onChange={handleChange}
-                                        aria-label="tipoUsuario"
-                                        aria-describedby="basic-addon2" />
+                                        required
+                                    >
+                                        <option value="rescate">Voluntario de Rescate y Rehabilitación</option>
+                                        <option value="educacion">Voluntario de Educación y Concienciación</option>
+                                        <option value="monitoreo">Voluntario de Monitoreo y Observación</option>
+                                        <option value="conservacion">Voluntario de Conservación de Hábitats</option>
+                                        <option value="veterinario">Voluntario de Apoyo Veterinario</option>
+                                        <option value="administracion">Voluntario de Gestión y Administración</option>
+                                        <option value="comunicacion">Voluntario de Comunicación y Redes Sociales</option>
+                                        <option value="manejo">Voluntario de Captura y Manejo</option>
+                                        <option value="investigacion">Voluntario de Investigación</option>
+                                        <option value="educacion-ninos">Voluntario de Educación Ambiental para Niños</option>
+                                    </select>
+
                                 </div>
 
                                 <div className="form-floating mt-5 w-75">
