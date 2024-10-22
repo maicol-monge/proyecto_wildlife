@@ -71,6 +71,25 @@ app.post('/donar', (req, res) => {
     });
 });
 
+// Ruta para guardar testimonios
+app.post('/testimonios', (req, res) => {
+    const { nombre, correo, tipoVoluntario, mensaje } = req.body;
+
+    if (!nombre || !correo || !mensaje || !tipoVoluntario) {
+        return res.status(400).json({ message: 'Por favor completa todos los campos.' });
+    }
+
+    const sql = 'INSERT INTO testimonios (nombre, correo, tipoVoluntario, mensaje) VALUES (?, ?, ?, ?)';
+    db.query(sql, [nombre, correo, tipoVoluntario, mensaje], (err, result) => {
+        if (err) {
+            console.error('Error al insertar el testimonio:', err);
+            return res.status(500).json({ message: 'Error al insertar el testimonio.' });
+        }
+        res.status(200).json({ message: 'Testimonio enviado con éxito.' });
+    });
+});
+
+
 // Iniciar servidor
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);

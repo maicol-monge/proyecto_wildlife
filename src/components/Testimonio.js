@@ -53,24 +53,24 @@ function Contacto() {
 
     const handleSubmit = async (e) => {
         e.preventDefault(); // Evita que la página se recargue
-
+    
         // Validación simple
         if (!formData.nombre || !formData.correo || !formData.mensaje || !formData.tipoVoluntario) {
             alert('Por favor completa todos los campos.');
             return;
         }
-
+    
         try {
-            const response = await fetch('http://localhost:3006/contact', {
+            const response = await fetch('http://localhost:3006/testimonios', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             });
-
+    
             if (response.ok) {
-                alert('Mensaje enviado con éxito.');
+                alert('Testimonio enviado con éxito.');
                 // Limpiar el formulario
                 setFormData({
                     nombre: '',
@@ -79,7 +79,7 @@ function Contacto() {
                     mensaje: ''
                 });
             } else {
-                alert('Hubo un error al enviar el mensaje.');
+                alert('Hubo un error al enviar el testimonio.');
             }
         } catch (error) {
             console.error('Error:', error);
