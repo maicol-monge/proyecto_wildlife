@@ -28,7 +28,7 @@ function Preguntas() {
             questions: [
                 { title: '¿Cómo puedo convertirme en voluntario de POW?', content: 'Puedes unirte a nuestro equipo de voluntarios completando el formulario de registro en la sección "Voluntarios" de nuestro sitio web. Nos pondremos en contacto contigo para discutir las oportunidades disponibles.' },
                 { title: '¿Necesito experiencia previa para ser voluntario?', content: 'No es necesario tener experiencia previa. Ofrecemos formación y orientación para que todos nuestros voluntarios puedan contribuir de manera efectiva, independientemente de su nivel de experiencia.' },
-                { title: '¿Hay oportunidades de voluntariado en el exterior?', content: 'Sí, POW ofrece oportunidades de voluntariado tanto a nivel local como internacional. Puedes elegir participar en proyectos en diferentes partes del mundo, dependiendo de tus intereses y disponibilidad.' }
+                { title: '¿Hay oportunidades de voluntariado en el extranjero?', content: 'Sí, POW ofrece oportunidades de voluntariado tanto a nivel local como internacional. Puedes elegir participar en proyectos en diferentes partes del mundo, dependiendo de tus intereses y disponibilidad.' }
             ]
         },
         {
