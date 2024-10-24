@@ -318,7 +318,7 @@ function Voluntario() {
                                         <option value="AF">Afghanistan</option>
                                         <option value="AL">Albania</option>
                                         <option value="DZ">Algeria</option>
-                                        <option value="AS">Americana Samoa</option>
+                                        <option value="AS">American Samoa</option>
                                         <option value="AD">Andorra</option>
                                         <option value="AO">Angola</option>
                                         <option value="AI">Anguilla</option>
