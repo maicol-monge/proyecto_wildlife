@@ -608,7 +608,7 @@ function Voluntario() {
                                 testimonios.map((testimonio, index) => (
                                     <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
                                         <div className="d-flex flex-column align-items-center">
-                                            <img src={`https://i.ibb.co/kQY2bZs/Ana.webp`} className="rounded-circle mb-3" alt={testimonio.nombre} style={{ width: '150px', height: '150px' }} />
+                                            <img src={`https://i.ibb.co/Svkpjfx/Ara-a.jpg`} className="rounded-circle mb-3" alt={testimonio.nombre} style={{ width: '150px', height: '150px' }} />
                                             <div className='d-flex justify-content-start w-75'>
                                                 <img src='https://i.ibb.co/nDjSf4p/comilla-left.png' className="mb-3" alt="quote icon" style={{ width: '50px' }} />
                                             </div>

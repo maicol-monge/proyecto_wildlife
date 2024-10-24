@@ -128,10 +128,7 @@ function Navbar() {
                                     <Link className="nav-link text-light" to="/preguntas">Preguntas Frecuentes</Link>
                                 </li>
                             </ul>
-                            <form className="d-flex" role="search">
-                                <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                                <button className="btn btn-outline-success text-light" type="submit">Buscar</button>
-                            </form>
+                            
                         </div>
                     </div>
                 </div>

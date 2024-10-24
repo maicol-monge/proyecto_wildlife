@@ -136,16 +136,16 @@ function Contacto() {
                                         onChange={handleChange}
                                         required
                                     >
-                                        <option value="rescate">Voluntario de Rescate y Rehabilitación</option>
-                                        <option value="educacion">Voluntario de Educación y Concienciación</option>
-                                        <option value="monitoreo">Voluntario de Monitoreo y Observación</option>
-                                        <option value="conservacion">Voluntario de Conservación de Hábitats</option>
-                                        <option value="veterinario">Voluntario de Apoyo Veterinario</option>
-                                        <option value="administracion">Voluntario de Gestión y Administración</option>
-                                        <option value="comunicacion">Voluntario de Comunicación y Redes Sociales</option>
-                                        <option value="manejo">Voluntario de Captura y Manejo</option>
-                                        <option value="investigacion">Voluntario de Investigación</option>
-                                        <option value="educacion-ninos">Voluntario de Educación Ambiental para Niños</option>
+                                        <option value="Voluntario de Rescate y Rehabilitación">Voluntario de Rescate y Rehabilitación</option>
+                                        <option value="Voluntario de Educación y Concienciación">Voluntario de Educación y Concienciación</option>
+                                        <option value="Voluntario de Monitoreo y Observación">Voluntario de Monitoreo y Observación</option>
+                                        <option value="Voluntario de Conservación de Hábitats">Voluntario de Conservación de Hábitats</option>
+                                        <option value="Voluntario de Apoyo Veterinario">Voluntario de Apoyo Veterinario</option>
+                                        <option value="Voluntario de Gestión y Administración">Voluntario de Gestión y Administración</option>
+                                        <option value="Voluntario de Comunicación y Redes Sociales">Voluntario de Comunicación y Redes Sociales</option>
+                                        <option value="Voluntario de Captura y Manejo">Voluntario de Captura y Manejo</option>
+                                        <option value="Voluntario de Investigación">Voluntario de Investigación</option>
+                                        <option value="Voluntario de Educación Ambiental para Niños">Voluntario de Educación Ambiental para Niños</option>
                                     </select>
 
                                 </div>
