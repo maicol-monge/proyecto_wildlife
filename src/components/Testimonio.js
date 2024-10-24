@@ -11,7 +11,7 @@ function Contacto() {
         tipoVoluntario: 'Voluntario de Rescate y Rehabilitación', // Valor por defecto
         mensaje: ''
     });
-
+    
     const backg_quokka = {
         backgroundImage: `url(https://i.ibb.co/fC9bzYD/Guarda-Recursos.webp)`,
         backgroundSize: 'cover',
@@ -46,8 +46,51 @@ function Contacto() {
         document.getElementById('Form').scrollIntoView({ behavior: 'smooth' });
     };
 
+    const [errors, setErrors] = useState({
+        nombre: '',
+        correo: '',
+        mensaje: ''
+    });
+
     const handleChange = (e) => {
         const { name, value } = e.target;
+        
+        // Validaciones para nombre, correo y mensaje
+        switch (name) {
+            case 'nombre':
+                if (value.length > 154) {
+                    setErrors((prevErrors) => ({ ...prevErrors, nombre: 'El nombre no puede superar los 154 caracteres.' }));
+                } else if (value === '') {
+                    setErrors((prevErrors) => ({ ...prevErrors, nombre: 'El nombre no puede estar vacío.' }));
+                } else {
+                    setErrors((prevErrors) => ({ ...prevErrors, nombre: '' }));
+                }
+                break;
+            
+            case 'correo':
+                if (value.length > 154) {
+                    setErrors((prevErrors) => ({ ...prevErrors, correo: 'El correo no puede superar los 154 caracteres.' }));
+                } else if (value === '') {
+                    setErrors((prevErrors) => ({ ...prevErrors, correo: 'El correo no puede estar vacío.' }));
+                } else {
+                    setErrors((prevErrors) => ({ ...prevErrors, correo: '' }));
+                }
+                break;
+            
+            case 'mensaje':
+                if (value.length > 500) {
+                    setErrors((prevErrors) => ({ ...prevErrors, mensaje: 'El mensaje no puede superar los 500 caracteres.' }));
+                } else if (value === '') {
+                    setErrors((prevErrors) => ({ ...prevErrors, mensaje: 'El mensaje no puede estar vacío.' }));
+                } else {
+                    setErrors((prevErrors) => ({ ...prevErrors, mensaje: '' }));
+                }
+                break;
+            
+            default:
+                break;
+        }
+
         setFormData({ ...formData, [name]: value });
     };
 
